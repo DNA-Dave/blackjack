@@ -1,0 +1,43 @@
+Document explaning my program:
+
+I decided that the most logial way to split the program was to make a dedicated blackjack class to handle most of the mechanics of blackjack, but for things that would be repeatedly used, like cards, decks, and hands of players, there was enough repetition to define classes for those objects. However, I did not have a player class, because I did not think that it was worth writing an entire class for a player when the data structures to keep track of players and things associated with each player did not require too much more code in the blackjack class (IE player_to_hands dict, player_to_gets dict, etc). 
+
+The blackjack class is, admittedly, pretty large and I could have decomposed some of the code more (IE the classes printing all hands, the dealers hand, and a single hand). However, due to time constraints (around 3 hr limit recommended by the assignment), I was not able to clean up the code as much as I wanted to. 
+
+I decided to choose python 3.6 because of the fact that 1. I am most confortable using this language, and 2. its ease of use and conciseness. Expanding on the second point, I had to implement a relatively large project within a short time period, and I wanted to not have to spend the time typing variable typings and other verbose aspects of other languages. 
+
+To test the program, I played around 10 rounds of the program just to get a general sense of what the bugs where. Bugs included continuing play even if all players ran out of money (see bug1.png), and errors printing the card ascii art to the terminal (see bug2.png). Then, after fixing those bugs, I came up with a variety of test cases by hardcoding player and dealer hands in the blackjack class (code deleted in final version you guys see) including:
+
+Dealer blackjacks (with ace showing), Player has insurance, Player pushes with/without doubling down
+
+Dealer blackjacks (with ace showing), Player has insurance, Player loses with/without doubling down
+
+Dealer blackjacks (with ace showing), Player does not have insurance, Player pushes with/without doubling down
+
+Dealer blackjacks (with ace showing), Player does not have insurance, Player loses with/without doubling down
+
+Dealer does not blackjack (with ace showing), Player does not have insurance, Player wins with/without doubling down
+
+Dealer does not blackjack (with ace showing), Player does not have insurance, Player pushes with/without doubling down
+
+Dealer does not blackjack (with ace showing), Player does not have insurance, Player loses with/without doubling down
+
+Dealer does not blackjack (with ace showing), Player has insurance, Player wins with/without doubling down
+
+Dealer does not blackjack (with ace showing), Player has insurance, Player pushes with/without doubling down 
+
+Dealer does not blackjack (with ace showing), Player has insurance, Player loses with/without doubling down
+
+Player loses (no ace showing) with/without doubling down
+
+Player pushes (no ace showing) with/without doubling down
+
+Player wins (no ace showing) with/without doubling down
+
+Player blackjacks (no ace showing) with/without doubling down
+
+Player split mechanic
+
+Validated all above with more than one player
+
+I manually validated all of these, and then decided that the program was bug-free. 
